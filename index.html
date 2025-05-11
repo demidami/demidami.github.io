@@ -7,21 +7,73 @@
 <link rel="manifest" href="site.webmanifest">
 <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
 <style>
-    body {
-      background-image: url("my-background-image.jpg");
-      background-repeat: repeat;
-      background-size: auto;
-      background-attachment: fixed;
-      background-position: top left;
-      color: #333; /* Optional: change text color to show up on dark background */
-      font-family: 'Codystar';font-size: 22px;
+     /* Reset and base styles */
+    * {
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    /* Video background */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Transparent side menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .side-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .side-menu a:hover {
+      text-decoration: underline;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
-<h1>Welcome to my website</h1>
-<p>I'm Layke and you're my peers.</p>
+<!-- Background Video -->
+  <video id="bg-video" autoplay loop muted playsinline>
+    <source src="your-video-file.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Transparent Side Menu -->
+  <div class="side-menu">
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
 </body>
 </html>
