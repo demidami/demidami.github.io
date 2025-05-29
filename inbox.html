@@ -1,114 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inbox</title>
   <style>
     body {
+      font-family: sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f1f3f4;
-      display: flex;
-      height: 100vh;
+      background: #f3f3f3;
     }
-
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background-color: #fff;
+    .notifications {
+      background: white;
       padding: 20px;
-      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ddd;
     }
-
-    .sidebar h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
+    .notification {
+      background: #e8f0fe;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
     }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sidebar li {
-      margin-bottom: 10px;
-    }
-
-    .sidebar a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    /* Inbox content */
-    .inbox {
-      flex: 1;
+    .calendar {
       padding: 20px;
-      overflow-y: auto;
     }
-
-    .email {
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    .calendar h2 {
+      margin: 0 0 10px;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+    .day {
+      background: white;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+      position: relative;
       cursor: pointer;
-      transition: background 0.2s;
     }
-
-    .email:hover {
-      background-color: #eaf1fb;
-    }
-
-    .email h3 {
-      margin: 0 0 5px 0;
-      font-size: 16px;
-    }
-
-    .email p {
-      margin: 0;
-      color: #555;
-      font-size: 14px;
-    }
-
-    .timestamp {
+    .day:hover::after {
+      content: attr(data-event);
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 5px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
       font-size: 12px;
-      color: #999;
-      text-align: right;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
 
-  <div class="sidebar">
-    <h2>Inbox</h2>
-    <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="inbox.html">📬 Inbox</a></li>
-    </ul>
+  <div class="notifications">
+    <div class="notification">🎤 Next Comedy Show – May 30th, 8PM @ Soho Theatre</div>
+    <div class="notification">📺 New Episode of "Hot Mic" drops – June 1st on YouTube</div>
   </div>
 
-  <div class="inbox">
-    <div class="email">
-      <h3>📣 Comedy Night — New Date Added!</h3>
-      <p>We’re back with more laughs! Don’t miss the next show on June 15th.</p>
-      <div class="timestamp">May 24, 2025</div>
+  <div class="calendar">
+    <h2>May 2025</h2>
+    <div class="calendar-grid">
+      <div class="day" data-event=""></div>
+      <div class="day" data-event=""></div>
+      <div class="day" data-event=""></div>
+      <div class="day" data-event="🎤 Soho Theatre Show">1</div>
+      <div class="day" data-event="">2</div>
+      <div class="day" data-event="">3</div>
+      <!-- Continue for rest of the month -->
     </div>
 
-    <div class="email">
-      <h3>🎤 Open Mic Slots Open</h3>
-      <p>Want to perform? Sign-up links for July dates are now live.</p>
-      <div class="timestamp">May 21, 2025</div>
-    </div>
-
-    <div class="email">
-      <h3>💌 Thank You for Coming!</h3>
-      <p>We loved seeing you at last week’s set. Here’s a peek at what’s next...</p>
-      <div class="timestamp">May 18, 2025</div>
+    <h2>June 2025</h2>
+    <div class="calendar-grid">
+      <div class="day" data-event="📺 Series Drop">1</div>
+      <div class="day" data-event="">2</div>
+      <!-- Continue for June -->
     </div>
   </div>
 
