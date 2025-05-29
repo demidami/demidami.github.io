@@ -1,12 +1,12 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url('Inbox-background.jpg'); /* image name */
+  background-image: url('Inbox-background.jpg'); 
   background-size: cover; /* makes it fill the screen */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* keeps it in place when scrolling */
   margin: 0;
-  padding: 20px;
+  padding: 0;
   color: #333;
 }
 
