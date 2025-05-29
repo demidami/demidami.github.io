@@ -1,0 +1,51 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.calendar {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.month-header {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #ffc0cb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.weekdays div {
+  font-weight: bold;
+  color: #ff69b4;
+}
+
+.days div {
+  background-color: #ffe4ec;
+  padding: 10px 0;
+  border-radius: 6px;
+}
