@@ -1,6 +1,10 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fff0f5;
+  background-image: url('inbox-background.jpg'); /* image name */
+  background-size: cover; /* makes it fill the screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* keeps it in place when scrolling */
   margin: 0;
   padding: 20px;
   color: #333;
@@ -41,7 +45,7 @@ body {
 
 .weekdays div {
   font-weight: bold;
-  color: #ff69b4;
+  color: #edcede;
 }
 
 .days div {
