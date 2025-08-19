@@ -37,18 +37,19 @@
     /* Transparent side menu */
     .side-menu {
       position: fixed;
-      top: 0;
-      right: 0;
-      width: 200px;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
-      color: white;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-      z-index: 2;
+  	top: 0;
+  	left: 0;
+  	width: 100%; 
+  	height: 60px; /* adjust as needed */
+  	background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  	color: white;
+  	padding: 10px 20px;
+  	display: flex;
+  	flex-direction: row; /* make links horizontal */
+  	align-items: center; /* vertically center links */
+  	justify-content: flex-end; /* align links to the right */
+  	gap: 30px; /* spacing between links */
+  	z-index: 2;
     }
 
     .side-menu a {
