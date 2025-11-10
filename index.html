@@ -11,6 +11,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<style>
+			/* Video background */
+    			#bg-video {
+      				position: fixed;
+  				top: 50%;
+  				left: 50%;
+ 				min-width: 100%;
+				min-height: 100%;
+  				width: auto;
+  				height: auto;
+  				transform: translate(-50%, -50%);
+  				object-fit: cover;  /* keeps aspect ratio and fills screen */
+  				z-index: -1;
+    			}
+		</style>
+
 	</head>
 	<body class="is-preload">
 		<embed name="aquatic ambience" src="/music/AquaticAmbience.mp3" loop="false" hidden="true" autostart="true">
@@ -26,7 +43,7 @@
 							<div class="inner">
 								<h1>LAYKE</h1>
 								<p>Hey stranger<br />
-								it's been a while.</p>
+								it's been a minute.</p>
 							</div>
 						</div>
 						
@@ -349,8 +366,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 			</div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+		
+		<!-- Background Video -->
+  			<video id="bg-video" autoplay loop muted playsinline>
+    				<source src="BackgroundFiller.mp4" type="video/mp4">
+  			</video>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
